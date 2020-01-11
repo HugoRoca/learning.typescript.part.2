@@ -1,0 +1,29 @@
+{
+  "name": "learning.typescript.part.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoRoca/learning.typescript.part.2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoRoca/learning.typescript.part.2/issues"
+  },
+  "homepage": "https://github.com/HugoRoca/learning.typescript.part.2#readme",
+  "dependencies": {
+    "@types/restify": "^8.4.2",
+    "nodemon": "^2.0.2",
+    "pg": "^7.17.1",
+    "restify": "^8.5.1",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.6.1",
+    "typeorm": "^0.2.22",
+    "typescript": "^3.7.4"
+  }
+}
