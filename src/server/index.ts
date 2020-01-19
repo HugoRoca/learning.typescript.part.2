@@ -1,6 +1,7 @@
 import { HttpServer } from "./httpServer";
 import * as restify from 'restify';
 import { Server, RequestHandler } from "restify";
+import { CONTROLLERS } from "../controllers/index";
 
 export class ApiServer implements HttpServer {
     private restify: Server;
@@ -39,7 +40,7 @@ export class ApiServer implements HttpServer {
         this.restify.use(restify.plugins.bodyParser());
         this.restify.use(restify.plugins.queryParser());
 
-        // TODO Controller init
+        CONTROLLERS.forEach(controller => controller.initialize(this));
 
         this.restify.listen(port, () => console.log('Server is up and running in port ' + port));
     }
