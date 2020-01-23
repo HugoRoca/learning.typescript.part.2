@@ -28,7 +28,8 @@ export class CustomerService {
 
     public async delete(id: number): Promise<Customer> {
         const connection = await DatabaseProvider.getConnection();
-        return await connection.getRepository(Customer).delete(id);
+        //return await connection.getRepository(Customer).delete(id);
+        return await connection.getRepository(Customer).findOne();
     }
 }
 
